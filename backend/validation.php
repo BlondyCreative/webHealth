@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 // Conexión a la base de datos
-$conexion = new mysqli("localhost", "root", "", "login");
+$conexion = new mysqli('127.0.0.1:3307', 'root', '', 'login');
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
 }
@@ -32,7 +32,7 @@ if ($verificar) {
 
         // Comparar directamente (sin encriptación)
         if ($password === $storedPassword) {
-            header("Location: /appHealth/frontend/view/sect1.html");
+            header("Location: /router.php?page=sect1");
             exit();
         } else {
             echo "<h3>Contraseña incorrecta</h3>";

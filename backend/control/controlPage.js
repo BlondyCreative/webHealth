@@ -1,4 +1,41 @@
-import { mriResults } from "/appHealth/frontend/items/items.js"
+const mriResults = [
+  {
+    id: "1",
+    image: "../../public/assets/brain1.png",
+    title: "Atrophy Mild ",
+    day: "2025-11-27",
+  },
+  {
+    id: "2",
+    image: "../../public/assets/brain2.png",
+    title: "Within Anomaly",
+    day: "2025-11-27",
+  },
+  {
+    id: "3",
+    image: "../../public/assets/brain3.png",
+    title: "Temporal Inflammation",
+    day: "2025-11-29",
+  },
+  {
+    id: "4",
+    image: "../../public/assets/brain1.png",
+    title: "Within Anomaly ",
+    day: "2025-11-29",
+  },
+  {
+    id: "5",
+    image: "../../public/assets/brain2.png",
+    title: "Atrophy ",
+    day: "2025-12-02",
+  },
+  {
+    id: "6",
+    image: "../../public/assets/brain3.png",
+    title: "Normal",
+    day: "2025-12-02",
+  },
+];
 
 export const init = function () {
   const leftContainer = document.querySelector(".column-left");
@@ -26,18 +63,18 @@ export const init = function () {
       const markup = `
 
                         <div class="mri_each" data-id="${result.id}">
-                       <img src="${result.image}" alt="MRI 1" class="mri-results">
-                         <div class="container2">
-                          <div class="culumn">
-    <p class="column__title"> ${result.title}</p>
-    <p class="column__day"> ${result.day}</p>
-</div>
-    <button class="btn--round btn--bookmark">
-  <img src="/appHealth/public/assets/icons/save-instagram (4).png" alt="Bookmark icon" id="bookmarkIcon">
-</button>
+                        <img src="${result.image}" alt="MRI 1" class="mri-results">
+                          <div class="container2">
+                           <div class="column">
+     <p class="column__title"> ${result.title}</p>
+     <p class="column__day"> ${result.day}</p>
  </div>
+     <button class="btn--round btn--bookmark">
+   <img src="../../public/assets/icons/save-instagram (4).png" alt="Bookmark icon" id="bookmarkIcon">
+ </button>
+  </div>
 
- </div>
+  </div>
   `;
       target.insertAdjacentHTML("beforeend", markup);
     });

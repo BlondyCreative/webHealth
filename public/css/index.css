@@ -51,15 +51,15 @@ body {
 }
 
 .mri-b-sub {
-   font-size: 19px;
+  font-size: 19px;
   font-family: "Archivo Black", sans-serif;
   font-weight: 500;
-    line-height: 1.1;
+  line-height: 1.1;
   margin-top: 70px;
-  margin-left:  180px;
+  margin-left: 180px;
   font-size: 42px;
   color: #004dc9;
-    flex-direction: row;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: start;
   position: absolute;
@@ -79,7 +79,6 @@ body {
   align-items: center;
   gap: 8px;
   margin-bottom: 12px;
- 
 }
 
 .dot {
@@ -111,14 +110,13 @@ body {
 /* Brain Condition Stats */
 .brain-condition-stats {
   padding: 14px;
-   margin-top: 80px;
+  margin-top: 80px;
 }
 
 .mri {
   width: 40px;
   height: 40px;
 }
-
 
 .stats-grid {
   display: grid;
@@ -287,8 +285,8 @@ body {
 
 /* Bottom Section */
 .bottom-section {
- width: 340px;
- height: 290px;
+  width: 340px;
+  height: 290px;
 }
 
 #blood-pressure-chart {
@@ -331,7 +329,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
-        
+
 .bottom-card {
   background: #f8fafc;
   border-radius: 12px;
@@ -368,7 +366,7 @@ body {
 .mri-grid img {
   width: 100%;
   aspect-ratio: 1;
-  
+
   border-radius: 6px;
 }
 
@@ -461,8 +459,6 @@ body {
   width: auto;
 }
 
-
-
 .cardio-badge {
   position: absolute;
   top: 8px;
@@ -534,10 +530,8 @@ body {
   height: 380px;
   border-color: #bfdbfe;
   opacity: 0.3;
-   margin-left: 60px;
+  margin-left: 60px;
 }
-
-
 
 /* Markers */
 .marker {
@@ -618,11 +612,8 @@ body {
   flex: 1;
 }
 
-
 /* grapics */
 
-
-      
 .patient-name {
   font-size: 12px;
   font-weight: 500;
@@ -630,7 +621,7 @@ body {
 }
 
 .patient-check {
-    position: relative;
+  position: relative;
   width: 17px;
   height: 17px;
   background: #ef4444;
@@ -640,7 +631,6 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 10px;
-
 }
 
 .patient-icon {
@@ -648,7 +638,6 @@ body {
   height: 10px;
   object-fit: contain;
 }
-
 
 .mri-results {
   width: 250px;
@@ -660,13 +649,11 @@ body {
   margin-top: 70px;
 }
 
-
-
 .btn--patient {
-    position: relative;
+  position: relative;
   width: 17px;
   height: 17px;
-background-color: #ffffff;
+  background-color: #ffffff;
 
   border-radius: 50%;
   border-color: #004dc9;
@@ -676,11 +663,9 @@ background-color: #ffffff;
   font-size: 10px;
 }
 
-.btn--patient:active{
-
+.btn--patient:active {
   background: #ef4444;
 }
-
 
 /* 1. Contenedor y Label */
 .form-check {
@@ -703,28 +688,27 @@ background-color: #ffffff;
   background-color: #fff; /* Fondo blanco por defecto */
   border: 1px solid #ced4da; /* Borde gris */
   border-radius: 0.25em;
-  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 
 /* 2. Estado Marcado (Checked) */
 .form-check-input:checked {
   background-color: #0d6efd; /* Azul de Bootstrap */
   border-color: #0d6efd; /* Borde azul */
-  
+
   /* Icono de check (usando SVG en Bootstrap, aquí simplificado con un background-image) */
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
   background-size: 100% 100%;
 }
 
-
-
-.checked  {
-    background: #095ff3;
+.checked {
+  background: #095ff3;
   margin-left: 8px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
-    font-size: 14px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -733,16 +717,13 @@ background-color: #ffffff;
 
 .mri_dis {
   margin-top: 170px;
-
 }
 .mri-row {
- display: flex;
- flex-direction: row;
-  row-gap: 6rem; 
+  display: flex;
+  flex-direction: row;
+  row-gap: 6rem;
   justify-content: center;
 }
-
-
 
 .column-left,
 .column-right {
@@ -751,10 +732,8 @@ background-color: #ffffff;
   gap: 4rem;
 }
 
-
-
 .mri-cnt {
-   margin-top: 150px;
+  margin-top: 150px;
   background-color: #ffffff;
 }
 .patient-radio {
@@ -764,12 +743,10 @@ background-color: #ffffff;
   border-radius: 50%;
 }
 
-
-
 .layout {
   display: flex;
   height: 100vh;
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .mri-gallery {
@@ -778,15 +755,14 @@ background-color: #ffffff;
   justify-content: center;
   align-items: center;
   gap: 6rem;
-  margin-top: 14vh;
-  margin-left: 20vh;
+  margin-top: 100px;
+  margin-left: 50px;
   background-color: #ffffff;
 }
 
 .mri-panel {
   width: 490px;
   background-color: #ffffff;
-
 }
 
 .mri_each {
@@ -794,9 +770,6 @@ background-color: #ffffff;
   flex-direction: column;
   background-color: #ffffff;
 }
-
-
-
 
 .list {
   display: flex;
@@ -810,28 +783,27 @@ background-color: #ffffff;
 }
 
 .container {
-flex-direction: column;
+  flex-direction: column;
 }
 .title {
-font-size: 17px;
-margin-top: 25px;
-margin-left: 19px;
+  font-size: 17px;
+  margin-top: 25px;
+  margin-left: 19px;
 }
 
 .day {
-font-size: 15px;
-margin-top: 8px;
-margin-left: 19px;
+  font-size: 15px;
+  margin-top: 8px;
+  margin-left: 19px;
 }
 
 .img-result {
   width: 79px;
   height: 70px;
-margin-top: 20px;
-margin-left: 29px;
-border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 29px;
+  border-radius: 10px;
 }
-
 
 .btn--round {
   width: 40px;
@@ -856,19 +828,16 @@ border-radius: 10px;
   fill: white;
 }
 
-
 .container2 {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   margin: 10px;
-
 }
 
-
-.culumn {
-    display: flex;
+.column {
+  display: flex;
   flex-direction: column;
   margin-top: 5px;
 }
@@ -877,14 +846,13 @@ border-radius: 10px;
   font-size: 14px;
 }
 
-.column__day{
-    font-size: 1
+.column__day {
+  font-size: 12px;
 }
-
 
 .all-screen {
   max-width: 120px;
-     justify-content: end;
+  justify-content: end;
 }
 /* Schedule Card */
 .schedule-card {
@@ -938,7 +906,6 @@ border-radius: 10px;
   font-weight: 500;
   color: #1e293b;
 }
-
 
 .schedule-date {
   font-size: 11px;

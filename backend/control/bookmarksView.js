@@ -11,7 +11,8 @@ class BookmarksView {
     );
     if (exists) return;
 
-    const markup = BookPreview.generateMarkup(list);
+
+     const markup = BookPreview.generateMarkup(list)
     this._parentElement.insertAdjacentHTML("beforeend", markup);
   }
 

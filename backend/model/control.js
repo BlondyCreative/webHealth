@@ -1,76 +1,70 @@
 export const state = {
   bookmarks: [],
-  list: []
+  list: [],
 };
 
 export const loadBookmarks = function () {
-
   try {
-   const data = JSON.parse(localStorage.getItem('bookmarks'))
-   const dataList = JSON.parse(localStorage.getItem('list '))
-   state.bookmarks = Array.isArray(data) ? data : []
-      state.list = Array.isArray( dataList ) ? dataList : []
+    const data = JSON.parse(localStorage.getItem("bookmarks"));
+    const dataList = JSON.parse(localStorage.getItem("list"));
+    state.bookmarks = Array.isArray(data) ? data : [];
+    state.list = Array.isArray(dataList) ? dataList : [];
   } catch (err) {
-    console.warn('Error al parsear bookmarks:', err);
+    console.warn("Error al parsear bookmarks:", err);
     state.bookmarks = [];
-    state.list = []
+    state.list = [];
   }
 };
 
-
 export const addBookmark = function (list) {
   if (!list || !list.id || !list.title || !list.day || !list.image) {
-    console.warn('Bookmark inválido:', list);
+    console.warn("Bookmark inválido:", list);
     return;
   }
 
   try {
-    const exists = state.bookmarks.some(b => b.id === list.id);
+    const exists = state.bookmarks.some((b) => b.id === list.id);
     if (exists) return;
 
     state.bookmarks.push(list);
-    localStorage.setItem('bookmarks', JSON.stringify(state.bookmarks && state.list));
-    localStorage.setItem('list', JSON.stringify(state.list));
-
+    localStorage.setItem("bookmarks", JSON.stringify(state.bookmarks));
+    localStorage.setItem("list", JSON.stringify(state.list));
   } catch (err) {
-    console.warn('Error al agregar bookmark:', err);
+    console.warn("Error al agregar bookmark:", err);
   }
 };
 
-        export const toggleBookmarks = function (list) {
-           const id = String(list.id);
-    const index = state.bookmarks.findIndex(b => b.id === list.id);
+export const toggleBookmarks = function (list) {
+  const id = String(list.id);
+  const index = state.bookmarks.findIndex((b) => b.id === list.id);
 
-    if (index === -1) {
+  if (index === -1) {
+    state.bookmarks.push(list);
+    localStorage.setItem("bookmarks", JSON.stringify(state.bookmarks));
+    localStorage.setItem("list", JSON.stringify(state.list));
+    return "added";
+  } else {
+    state.bookmarks.splice(index, 1);
+    localStorage.setItem("bookmarks", JSON.stringify(state.bookmarks));
+    localStorage.setItem("list", JSON.stringify(state.list));
+    return "removed";
+  }
+};
 
-      state.bookmarks.push(list);
-      localStorage.setItem('bookmarks', JSON.stringify(state.bookmarks));
-          localStorage.setItem('list', JSON.stringify(state.list));
-      return 'added';
-    } else {
+export const btnPatient = function (list) {
+  const buttons = document.querySelectorAll(".btn--patient");
 
-      state.bookmarks.splice(index, 1);
-      localStorage.setItem('bookmarks', JSON.stringify(state.bookmarks));
-          localStorage.setItem('list', JSON.stringify(state.list));
-      return 'removed';
-    }
-  };
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      // Quitar la clase 'active' de todos
+      if (btn.classList.contains("active")) {
+        buttons.forEach((b) => b.classList.remove("active"));
+      } else {
+        buttons.forEach((b) => b.classList.add("active"));
+      }
 
-
-          export const btnPatient = function (list) {
-const buttons = document.querySelectorAll('.btn--patient');
-
-buttons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    // Quitar la clase 'active' de todos
-   if (btn.classList.contains('active')) {
-buttons.forEach(b => b.classList.remove('active'));
-   } else {
-buttons.forEach(b => b.classList.add('active'));
-   }
-
-    // Agregar la clase 'active' solo al clickeado
-    btn.classList.add('active');
+      // Agregar la clase 'active' solo al clickeado
+      btn.classList.add("active");
+    });
   });
-});
-}
+};

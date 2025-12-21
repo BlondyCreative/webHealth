@@ -3,8 +3,7 @@ ob_start();
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-
-$conexion = new mysqli("localhost", "root", "", "login");
+$conexion = new mysqli('127.0.0.1:3307', 'root', '', 'login');
 if ($conexion->connect_error) {
     die("Error de conexión: " . $conexion->connect_error);
 }
@@ -23,15 +22,14 @@ $verificar->bind_param("s", $email);
 $verificar->execute();
 $verificar->store_result();
 
-if ($verificar->num_rows > 0) {
-        echo "<h3>Formulario ya registrado</h3>";
+if ($verificar->num_rows > 0) { echo "<h3>Este correo ya está registrado</h3>"; exit(); 
 } else {
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     $stmt = $conexion->prepare("INSERT INTO user (name, email, password) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $name, $email, $password );
+    $stmt->bind_param("sss", $name, $email, $password);
 
     if ($stmt->execute()) {
-        header("Location: /appHealth/router.php?page=login");
+
+         header("Location: /router.php?page=login");
         exit();
     } else {
         echo "<h3>Error al registrar: " . $stmt->error . "</h3>";

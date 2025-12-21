@@ -219,6 +219,33 @@ body {
   max-width: 100px;
 }
 
+.bottom-nav {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+  background: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 13px;
+  color: #c8ccd1;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-item:hover,
+.nav-item.active {
+  color: #004dc9;
+}
+
+
 .cta-button {
   position: absolute;
   bottom: 20px;

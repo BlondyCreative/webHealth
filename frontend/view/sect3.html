@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>General Indicators of the Brain</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+<link rel="stylesheet" href="public/css/index.css">
+
 </head>
-
-<link rel="stylesheet" href="/appHealth/public/css/index.css">
-
-
 <body>
   <div class="dashboard">
     <!-- Main Title -->
@@ -123,7 +123,7 @@
           <span class="card-title">My Brain Condition</span>
           <div class="doctor-badges">
             <div class="doctor-badge">
-            <img src="/appHealth/public/assets/doctor.png?height=32&width=32" alt="Doctor">
+            <img src="public/assets/doctor.png?height=32&width=32" alt="Doctor">
               <span>Doctor<br>Rodriguez</span>
             </div>
           </div>
@@ -134,14 +134,14 @@
             <h4>Full Brain</h4>
             <p class="card-subtitle">MRI</p>
               <div class="mri-grid">
-            <img src="/appHealth/public/assets/brain1.png" alt="MRI 1" class="mri">
-            <img src="/appHealth/public/assets/brain2.png" alt="MRI 2" class="mri">
-            <img src="/appHealth/public/assets/brain3.png" alt="MRI 3" class="mri">
-            <img src="/appHealth/public/assets/brain2.png" alt="MRI 4" class="mri">
-           <img src="/appHealth/public/assets/brain3.png" alt="MRI 5" class="mri">
-            <img src="/appHealth/public/assets/brain1.png" alt="MRI 6" class="mri">
+              <img src="public/assets/brain1.png" alt="MRI 1" class="mri">
+               <img src="public/assets/brain3.png" alt="MRI 2" class="mri">
+                <img src="public/assets/brain2.png" alt="MRI 3" class="mri">
+                <img src="public/assets/brain1.png" alt="MRI 4" class="mri">
+                        <img src="public/assets/brain3.png" alt="MRI 3" class="mri">
+                      <img src="public/assets/brain2.png" alt="MRI 3" class="mri">
             </div>
-            <a href="?page=result" class="see-results-btn">See results</a>
+            <a href="/router.php?page=results" class="see-results-btn">See results</a>
             <div class="mri-progress">
 
               <svg width="24" height="24" viewBox="0 0 36 36">
@@ -180,7 +180,7 @@
       <div class="brain-circle outer"></div>
       <div class="brain-circle inner"></div>
 
-               <img src="/appHealth/public/assets/hertWeb.png" alt="Doctor" class="Brain">
+               <img src="public/assets/hertWeb.png" alt="Doctor" class="Brain">
 
       <!-- Annotation markers -->
       <div class="marker marker-1"></div>
@@ -200,7 +200,7 @@
         </div>
         <div class="patient-list">
           <div class="patient-item active ">
-            <img src="/appHealth/public/assets/woman1.png" alt="Jason">
+            <img src="public/assets/woman1.png" alt="Jason">
             <div class="patient-info">
               <span class="patient-name">Alice Miller</span>
             </div>
@@ -208,7 +208,7 @@
   <input class="form-check-input" type="checkbox" value="" id="checkDefault"></div>
           </div>
           <div class="patient-item">
-           <img src="/appHealth/public/assets/man1.png" alt="Patient">
+           <img src="public/assets/man1.png" alt="Patient">
             <div class="patient-info">
               <span class="patient-name">Jhordan Wilson</span>
             </div>
@@ -216,7 +216,7 @@
   <input class="form-check-input" type="checkbox" value="" id="checkDefault"></div>
           </div>
           <div class="patient-item">
-           <img src="/appHealth/public/assets/woman3.png" alt="Patient">
+           <img src="public/assets/woman3.png" alt="Patient">
             <div class="patient-info">
               <span class="patient-name">Ana Gonzalez</span>
             </div>
@@ -263,7 +263,7 @@
           </div>
           <div class="schedule-item">
               <div class="schedule-avatar">
-             <img src="/appHealth/public/assets/doctora1.png" alt="Dra. Zara Smith">
+             <img src="public/assets/doctora1.png" alt="Dra. Zara Smith">
             </div>
             <div class="schedule-info">
               <span class="schedule-title">Dra. Alexandra Smith</span>
@@ -275,10 +275,12 @@
     </div>
 
     <!-- Bottom Navigation -->
-    <nav class="bottom-nav">
-      <a href="#" class="nav-item active">Home</a>
-      <a href="/appHealth/router.php?page=about" class="nav-item">About</a>
-      <a href="/appHealth/router.php?page=contactUs" class="nav-item">Contact</a>
+          <nav class="bottom-nav">
+      <a href="/router.php?page=sect1" class="nav-item ">Home</a>
+            <a href="/router.php?page=sect2" class="nav-item">heart</a>
+      <a href="#" class="nav-item active">Lungs</a>
+      <a href="/router.php?page=about" class="nav-item">About</a>
+      <a href="/router.php?page=contactUs" class="nav-item">Contact</a>
     </nav>
   </div>
 </body>

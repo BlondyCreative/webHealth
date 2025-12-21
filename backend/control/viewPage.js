@@ -37,9 +37,9 @@ export const toggleBookmarkIcon = function (button, action) {
   const icon = button.querySelector("#bookmarkIcon");
   if (!icon) return;
 
-  const srcAdded = "/appHealth/public/assets/icons/save-instagram (3).png";
+  const srcAdded = "../../public/assets/icons/save-instagram (3).png";
 
-  const srcRemoved = "/appHealth/public/assets/icons/save-instagram (4).png";
+  const srcRemoved = "../../public/assets/icons/save-instagram (4).png";
 
   icon.setAttribute("src", action === "added" ? srcAdded : srcRemoved);
 };
